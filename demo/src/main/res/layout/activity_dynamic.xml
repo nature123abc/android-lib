@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.MainActivity">
+
+    <include layout="@layout/include_title1"></include>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="蓝牙：" />
+
+                <com.xuexiang.xui.widget.spinner.materialspinner.MaterialSpinner
+                    android:id="@+id/msBle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+
+            <View style="@style/LineHorizontal" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical">
+
+                <com.xuexiang.xui.widget.textview.supertextview.SuperButton
+                    android:id="@+id/btnStart"
+                    style="@style/ButtonView.Blue1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:text="启动动态" />
+
+                <com.xuexiang.xui.widget.textview.supertextview.SuperButton
+                    android:id="@+id/btnEnd"
+                    style="@style/ButtonView.Blue1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:text="停止动态" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical">
+
+                <com.xuexiang.xui.widget.textview.supertextview.SuperButton
+                    android:id="@+id/btnCalib"
+                    style="@style/ButtonView.Blue1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:text="标定惯导" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical">
+
+                <com.xuexiang.xui.widget.textview.supertextview.SuperButton
+                    android:id="@+id/btnStartRadar"
+                    style="@style/ButtonView.Blue1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:text="雷达+启动动态" />
+
+                <com.xuexiang.xui.widget.textview.supertextview.SuperButton
+                    android:id="@+id/btnStartRadar1"
+                    style="@style/ButtonView.Blue1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:text="雷达+启动动态1" />
+
+                <com.xuexiang.xui.widget.textview.supertextview.SuperButton
+                    android:id="@+id/btnEndRadar"
+                    style="@style/ButtonView.Blue1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:text="雷达+停止动态" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical">
+
+                <com.xuexiang.xui.widget.textview.supertextview.SuperButton
+                    android:id="@+id/btnStartIns"
+                    style="@style/ButtonView.Blue1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:text="惯导+启动动态" />
+
+                <com.xuexiang.xui.widget.textview.supertextview.SuperButton
+                    android:id="@+id/btnEndIns"
+                    style="@style/ButtonView.Blue1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:text="惯导+停止动态" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical">
+
+                <com.xuexiang.xui.widget.textview.supertextview.SuperButton
+                    android:id="@+id/btnStartInsRadar"
+                    style="@style/ButtonView.Blue1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:text="惯导+雷达+启动" />
+
+                <com.xuexiang.xui.widget.textview.supertextview.SuperButton
+                    android:id="@+id/btnStartInsRadar1"
+                    style="@style/ButtonView.Blue1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:text="惯导+雷达1+启动" />
+
+                <com.xuexiang.xui.widget.textview.supertextview.SuperButton
+                    android:id="@+id/btnEndInsRadar"
+                    style="@style/ButtonView.Blue1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:text="惯导+雷达+停止" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="回复" />
+
+
+                <com.xuexiang.xui.widget.edittext.MultiLineEditText
+                    android:id="@+id/metRemark"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_marginTop="5dp"
+                    app:mlet_contentViewHeight="300dp"
+                    app:mlet_hintText="回复"
+                    app:mlet_maxCount="1000" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical">
+
+                <com.xuexiang.xui.widget.textview.supertextview.SuperButton
+                    android:id="@+id/btnCommBlue"
+                    style="@style/SuperButton.Blue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:text="命令测试" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.MainActivity">
+
+    <include layout="@layout/include_title1"></include>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TableRow android:layout_marginTop="5dp">
+
+                    <com.xuexiang.xui.widget.textview.supertextview.SuperButton
+                        android:id="@+id/btnBlue"
+                        style="@style/ButtonView.Blue1"
+                        android:layout_marginStart="20dp"
+                        android:layout_weight="1"
+                        android:text="SW小车蓝牙" />
+
+                    <com.xuexiang.xui.widget.textview.supertextview.SuperButton
+                        android:id="@+id/ouputData"
+                        style="@style/ButtonView.Blue1"
+                        android:layout_marginStart="20dp"
+                        android:layout_weight="1"
+                        android:text="导出数据" />
+                </TableRow>
+
+                <TableRow android:layout_marginTop="5dp">
+
+                    <com.xuexiang.xui.widget.textview.supertextview.SuperButton
+                        android:id="@+id/commonBlue"
+                        style="@style/ButtonView.Blue1"
+                        android:layout_marginStart="20dp"
+                        android:layout_weight="1"
+                        android:text="一般蓝牙" />
+
+                    <com.xuexiang.xui.widget.textview.supertextview.SuperButton
+                        android:id="@+id/sbTest"
+                        style="@style/ButtonView.Blue1"
+                        android:layout_marginStart="20dp"
+                        android:layout_weight="1"
+                        android:text="sbTest" />
+                </TableRow>
+
+                <TableRow android:layout_marginTop="5dp">
+
+                    <com.xuexiang.xui.widget.textview.supertextview.SuperButton
+                        android:id="@+id/sbSocket"
+                        style="@style/ButtonView.Blue1"
+                        android:layout_marginStart="20dp"
+                        android:layout_weight="1"
+                        android:text="网络连接" />
+
+                    <com.xuexiang.xui.widget.textview.supertextview.SuperButton
+                        android:id="@+id/sbSocketSW"
+                        style="@style/ButtonView.Blue1"
+                        android:layout_marginStart="20dp"
+                        android:layout_weight="1"
+                        android:text="SW网络连接" />
+                </TableRow>
+
+                <TableRow android:layout_marginTop="5dp">
+
+                    <com.xuexiang.xui.widget.textview.supertextview.SuperButton
+                        android:id="@+id/dynamic"
+                        style="@style/ButtonView.Blue1"
+                        android:layout_marginStart="20dp"
+                        android:layout_weight="1"
+                        android:text="动态测量" />
+
+                    <com.xuexiang.xui.widget.textview.supertextview.SuperButton
+                        android:id="@+id/dynamic2"
+                        style="@style/ButtonView.Blue1"
+                        android:layout_marginStart="20dp"
+                        android:layout_weight="1"
+                        android:text="动态测量2" />
+                </TableRow>
+
+                <TableRow android:layout_marginTop="5dp">
+
+                    <com.xuexiang.xui.widget.textview.supertextview.SuperButton
+                        android:id="@+id/sbSwCalib"
+                        style="@style/ButtonView.Blue1"
+                        android:layout_marginStart="20dp"
+                        android:layout_weight="1"
+                        android:text="四维标定" />
+
+                    <com.xuexiang.xui.widget.textview.supertextview.SuperButton
+                        android:id="@+id/sbUpdate"
+                        style="@style/ButtonView.Blue1"
+                        android:layout_marginStart="20dp"
+                        android:layout_weight="1"
+                        android:text="更新" />
+
+
+                </TableRow>
+
+                <TableRow android:layout_marginTop="5dp">
+
+                    <com.xuexiang.xui.widget.textview.supertextview.SuperButton
+                        android:id="@+id/sbSn"
+                        style="@style/ButtonView.Blue1"
+                        android:layout_marginStart="20dp"
+                        android:layout_weight="1"
+                        android:text="设置车号" />
+
+
+                    <com.xuexiang.xui.widget.textview.supertextview.SuperButton
+                        android:id="@+id/sbOutput"
+                        style="@style/ButtonView.Blue1"
+                        android:layout_marginStart="20dp"
+                        android:layout_weight="1"
+                        android:text="导出数据" />
+
+
+                </TableRow>
+            </TableLayout>
+
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TableRow android:layout_marginTop="30dp">
+
+                    <com.xuexiang.xui.widget.textview.supertextview.SuperButton
+                        android:id="@+id/sbPhone"
+                        style="@style/ButtonView.Blue1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_weight="1"
+                        android:text="获取手机信息" />
+
+                    <com.xuexiang.xui.widget.textview.supertextview.SuperButton
+                        android:id="@+id/sbcalib"
+                        style="@style/ButtonView.Blue1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_weight="1"
+                        android:text="倾角标定" />
+
+                </TableRow>
+
+                <TableRow android:layout_marginTop="5dp">
+
+                    <com.xuexiang.xui.widget.textview.supertextview.SuperButton
+                        android:id="@+id/sbSocket2"
+                        style="@style/ButtonView.Blue1"
+                        android:layout_marginStart="20dp"
+                        android:layout_weight="1"
+                        android:text="网络连接2" />
+
+
+
+
+
+                </TableRow>
+            </TableLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

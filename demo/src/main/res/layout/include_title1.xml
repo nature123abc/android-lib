@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+   <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.xuexiang.xui.widget.actionbar.TitleBar
+            android:id="@+id/titlebar"
+            style="@style/TitleStyle"
+            app:tb_actionPadding="20dp"
+            app:tb_barHeight="65dp"
+            app:tb_dividerColor="@color/xui_config_color_red"
+            app:tb_sideTextPadding="20dp"
+            app:tb_titleText="" />
+
+    </LinearLayout>
+</LinearLayout>

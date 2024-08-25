@@ -1,0 +1,135 @@
+plugins {
+    id 'com.android.library'
+    id 'maven-publish'
+    id 'org.greenrobot.greendao'
+}
+
+subprojects {
+    configurations {
+        deployerJars
+    }
+    apply plugin: 'java'
+    apply plugin: 'maven-publish'
+    apply plugin: 'java-library'
+}
+
+//https://zhuanlan.zhihu.com/p/507980481
+
+/*publishing {
+    publications {
+        // 这个mavenJava可以随便填，只是一个任务名字而已
+        // MavenPublication必须有，这个是调用的任务类
+        mavenJava(MavenPublication) {
+            // 这里头是artifacts的配置信息，不填会采用默认的
+            groupId = 'com.nature.dk_android'
+            artifactId = 'dk_android'
+            version = '1.1'
+
+            //from components.java
+        }
+    }
+}*/
+
+
+
+android {
+    namespace 'com.nature.dk_android'
+    compileSdk rootProject.ext.android["compileSdkVersion"]
+    buildFeatures {
+        viewBinding true
+    }
+    defaultConfig {
+        minSdk rootProject.ext.android["minSdkVersion"]
+        targetSdk rootProject.ext.android["targetSdkVersion"]
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+    /*  lintOptions {
+          checkReleaseBuilds false
+          abortOnError false
+      }*/
+    publishing {
+        multipleVariants {
+            withSourcesJar()
+            withJavadocJar()
+            allVariants()
+        }
+    }
+    publishing {
+        singleVariant("release")
+    }
+
+
+}
+
+afterEvaluate {
+    publishing {
+        def versionName = "1.1.1" // 当前版本依赖库版本号，这个jitpack不会使用到，只是我们开发者自己查看
+        publications {
+            // Creates a Maven publication called "release".
+            release(MavenPublication) {
+                // Applies the component for the release build variant.
+               // from components.release // 表示发布 release（jitpack 都不会使用到）
+                // from components.findByName('release')
+                //from components.release
+                // You can then customize attributes of the publication as shown below.
+                groupId = 'com.nature.dk_android' // 这个是依赖库的组 id
+                artifactId = 'dk_android' // 依赖库的名称（jitpack 都不会使用到）
+                version = versionName
+            }
+        }
+        repositories {
+            // 下面这部分，不是很清楚加不加，但是最后加上
+            maven {
+                // change URLs to point to your repos, e.g. http://my.org/repo
+                def baseUrl = buildDir.getParent()
+                def releasesRepoUrl = "$baseUrl/repos/releases"
+                def snapshotsRepoUrl = "$baseUrl/repos/snapshots"
+                url = version.endsWith('SNAPSHOT') ? snapshotsRepoUrl : releasesRepoUrl
+            }
+        }
+    }
+}
+
+dependencies {
+    implementation rootProject.ext.dependencies["MicroGIS"]
+    implementation project(':lib_dk')
+    implementation rootProject.ext.dependencies["blankj-utilcodex"]
+    //implementation rootProject.ext.dependencies["dkgis"]
+    implementation rootProject.ext.dependencies["rxjava3"]
+    implementation rootProject.ext.dependencies["rxandroid3"]
+    implementation rootProject.ext.dependencies["greendao"]
+    implementation rootProject.ext.dependencies["appcompat"]
+    implementation rootProject.ext.dependencies["material"]
+    implementation rootProject.ext.dependencies["sqlcipher"]
+    implementation 'androidx.sqlite:sqlite:2.3.1'
+
+}
+
+configurations.all {
+    resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
+}
+
+/*task generateSourcesJar(type: Jar) {
+    from android.sourceSets.main.java.srcDirs
+    //classifier 'sources'
+}*/
+
+
+task generateSourcesJar(type: Jar) {
+    from android.sourceSets.main.java.srcDirs
+    // classifier 'sources'
+    //archiveClassifier.set("sources")
+}
+
+
+

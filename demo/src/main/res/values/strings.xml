@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">无线调试</string>
+    <string name="dir_x_0_positive">0位X正向</string>
+    <string name="title_activity_phone">PhoneActivity</string>
+</resources>

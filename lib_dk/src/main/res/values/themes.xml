@@ -1,0 +1,114 @@
+<resources>
+
+
+    <style name="AppTheme" parent="XUITheme.Phone">
+        <!--  <style name="AppTheme" parent="android:Theme.Light">-->
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="TitleStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:background">@color/xui_config_color_titlebar</item>
+
+    </style>
+
+
+    <style name="TitleStyle1" parent="TitleStyle">
+        <item name="tb_actionPadding">20dp</item>
+        <item name="tb_barHeight">65dp</item>
+        <item name="tb_titleTextColor">@color/black</item>
+        <item name="tb_dividerColor">@color/xui_config_color_red</item>
+        <item name="tb_sideTextPadding">20dp</item>
+    </style>
+
+    <style name="ButtonView.Blue1" parent="ButtonView.Blue">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">16sp</item>
+
+    </style>
+
+
+    <style name="img_Style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="TxtTitle" parent="@style/img_Style">
+        <item name="android:textColor">#000000</item>
+        <item name="android:focusable">false</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:drawablePadding">10dp</item>
+        <item name="android:gravity">bottom</item>
+        <item name="android:paddingRight">18dp</item>
+        <item name="android:textSize">18sp</item>
+
+
+    </style>
+
+
+    <style name="commonText">
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColor">@color/black</item>
+
+    </style>
+
+    <style name="jobInfoText" parent="commonText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">18dp</item>
+    </style>
+
+    <style name="txt_card_common" parent="commonText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+
+    </style>
+
+    <style name="txt_card_title" parent="txt_card_common">
+        <item name="android:layout_margin">6dp</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="txt_card_content" parent="txt_card_common">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+
+    <style name="Button.Blue.1" parent="ButtonView.Blue">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="textRadius">3dp</item>
+    </style>
+
+
+    <style name="Button.Green.1" parent="ButtonView.Green">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="textRadius">3dp</item>
+    </style>
+
+    <style name="Button.Gray.1" parent="ButtonView.Gray">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="textRadius">3dp</item>
+    </style>
+</resources>

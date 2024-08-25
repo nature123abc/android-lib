@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.MainActivity">
+
+    <include layout="@layout/include_title1"></include>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="蓝牙：" />
+
+                <com.xuexiang.xui.widget.spinner.materialspinner.MaterialSpinner
+                    android:id="@+id/msBle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+
+            <View style="@style/LineHorizontal" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="命令：" />
+
+                <com.xuexiang.xui.widget.spinner.editspinner.EditSpinner
+                    android:id="@+id/esCmd"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="2dp"
+                    app:es_height="40dp" />
+
+            </LinearLayout>
+
+            <View style="@style/LineHorizontal" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="回复：" />
+
+
+                <com.xuexiang.xui.widget.edittext.MultiLineEditText
+                    android:id="@+id/metRemark"
+                    android:layout_width="match_parent"
+                    android:layout_height="400dp"
+                    android:layout_marginTop="10dp"
+                    app:mlet_contentViewHeight="400dp"
+                    app:mlet_hintText="回复"
+                    app:mlet_maxCount="20000" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center_vertical">
+
+        <com.xuexiang.xui.widget.textview.supertextview.SuperButton
+
+            android:id="@+id/btnClear"
+            style="@style/ButtonView.Blue1"
+            android:layout_marginLeft="40dp"
+            android:text="清空" />
+
+        <com.xuexiang.xui.widget.textview.supertextview.SuperButton
+            android:id="@+id/btnBlue"
+            style="@style/ButtonView.Blue1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_weight="1"
+            android:text="发送" />
+
+        <!--   <com.xuexiang.xui.widget.textview.supertextview.SuperButton
+               android:id="@+id/btnSave"
+               style="@style/SuperButton.Blue"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginLeft="40dp"
+               android:layout_marginRight="40dp"
+               android:layout_weight="1"
+               android:text="发送" />-->
+
+    </LinearLayout>
+
+
+</LinearLayout>

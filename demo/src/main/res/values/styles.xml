@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="EditDoubleNum">
+        <item name="android:layout_weight">1</item>
+        <item name="android:inputType">number|numberDecimal|numberSigned</item>
+
+    </style>
+</resources>

@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.MainActivity">
+
+    <include layout="@layout/include_title1"></include>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="vertical">
+
+                <TableRow android:layout_marginTop="2dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="蓝牙：" />
+
+                    <com.xuexiang.xui.widget.spinner.materialspinner.MaterialSpinner
+                        android:id="@+id/msBle"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical" />
+
+
+                </TableRow>
+            </TableLayout>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TableRow android:layout_marginTop="2dp">
+
+
+                    <TextView android:text="数据库路径" />
+
+                    <EditText
+                        android:id="@+id/edtPath"
+                        android:layout_weight="1" />
+
+
+                </TableRow>
+            </TableLayout>
+
+            <TextView
+                android:id="@+id/txtInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TableRow android:layout_marginTop="2dp">
+
+                    <com.xuexiang.xui.widget.textview.supertextview.SuperButton
+                        android:id="@+id/btnSelectDb"
+                        style="@style/ButtonView.Blue1"
+                        android:layout_weight="1"
+                        android:text="选择数据库" />
+
+                    <com.xuexiang.xui.widget.textview.supertextview.SuperButton
+                        android:id="@+id/btnSave"
+                        style="@style/ButtonView.Blue1"
+                        android:layout_marginLeft="20dp"
+                        android:layout_weight="1"
+                        android:text="保存" />
+                </TableRow>
+
+                <TableRow android:layout_marginTop="2dp">
+
+                    <TextView android:text="小车序列号：" />
+
+                    <EditText
+                        android:id="@+id/edtCarSn"
+                        android:layout_weight="1" />
+
+
+                </TableRow>
+
+                <TableRow android:layout_marginTop="2dp">
+
+                    <TextView android:text="温度改正系数：" />
+
+                    <EditText
+                        android:id="@+id/edtTempParm"
+                        style="@style/EditDoubleNum" />
+
+
+                </TableRow>
+
+                <TableRow android:layout_marginTop="2dp">
+
+                    <TextView android:text="出厂CD：" />
+
+                    <EditText
+                        android:id="@+id/initCD"
+                        style="@style/EditDoubleNum" />
+
+
+                </TableRow>
+
+                <TableRow android:layout_marginTop="2dp">
+
+                    <TextView android:text="出厂AE：" />
+
+                    <EditText
+                        android:id="@+id/initAE"
+                        style="@style/EditDoubleNum" />
+
+
+                </TableRow>
+
+                <TableRow android:layout_marginTop="2dp">
+
+                    <TextView android:text="出厂BF：" />
+
+                    <EditText
+                        android:id="@+id/initBF"
+                        style="@style/EditDoubleNum" />
+
+
+                </TableRow>
+
+                <TableRow android:layout_marginTop="2dp">
+
+                    <TextView android:text="出厂H：" />
+
+                    <EditText
+                        android:id="@+id/initH"
+                        style="@style/EditDoubleNum" />
+
+
+                </TableRow>
+
+                <TableRow android:layout_marginTop="2dp">
+
+                    <TextView android:text="编码器直径" />
+
+                    <EditText
+                        android:id="@+id/initR"
+                        style="@style/EditDoubleNum" />
+
+
+                </TableRow>
+
+                <TableRow android:layout_marginTop="2dp">
+
+                    <TextView android:text="出厂AC" />
+
+                    <EditText
+                        android:id="@+id/initAC"
+                        style="@style/EditDoubleNum" />
+
+
+                </TableRow>
+
+                <TableRow android:layout_marginTop="2dp">
+
+                    <TextView android:text="出厂BD" />
+
+                    <EditText
+                        android:id="@+id/initBD"
+                        style="@style/EditDoubleNum" />
+
+
+                </TableRow>
+
+                <TableRow android:layout_marginTop="2dp">
+
+                    <TextView android:text="出厂AB" />
+
+                    <EditText
+                        android:id="@+id/initAB"
+                        style="@style/EditDoubleNum" />
+
+
+                </TableRow>
+
+                <TableRow android:layout_marginTop="2dp">
+
+                    <TextView android:text="左端盒到左棱镜EO" />
+
+                    <EditText
+                        android:id="@+id/initEO"
+                        style="@style/EditDoubleNum" />
+
+
+                </TableRow>
+
+                <TableRow android:layout_marginTop="2dp">
+
+                    <TextView android:text="右端盒到右棱镜FO" />
+
+                    <EditText
+                        android:id="@+id/initFO"
+                        style="@style/EditDoubleNum" />
+
+
+                </TableRow>
+
+                <TableRow android:layout_marginTop="2dp">
+
+                    <TextView android:text="出厂AT" />
+
+                    <EditText
+                        android:id="@+id/initAT"
+                        style="@style/EditDoubleNum" />
+
+                    <com.xuexiang.xui.widget.textview.supertextview.SuperButton
+                        android:id="@+id/btnMeaAT"
+                        style="@style/ButtonView.Blue1"
+                        android:text="测量" />
+                </TableRow>
+
+                <TableRow android:layout_marginTop="2dp">
+
+                    <TextView android:text="出厂BT" />
+
+                    <EditText
+                        android:id="@+id/initBT"
+                        style="@style/EditDoubleNum" />
+
+                    <com.xuexiang.xui.widget.textview.supertextview.SuperButton
+                        android:id="@+id/btnMeaBT"
+                        style="@style/ButtonView.Blue1"
+                        android:text="测量" />
+                </TableRow>
+
+                <TableRow android:layout_marginTop="2dp">
+
+                    <TextView android:text="出厂CT" />
+
+                    <EditText
+                        android:id="@+id/initCT"
+                        style="@style/EditDoubleNum" />
+
+                    <com.xuexiang.xui.widget.textview.supertextview.SuperButton
+                        android:id="@+id/btnMeaCT"
+                        style="@style/ButtonView.Blue1"
+                        android:text="测量" />
+                </TableRow>
+
+                <TableRow android:layout_marginTop="2dp">
+
+                    <TextView android:text="出厂DT" />
+
+                    <EditText
+                        android:id="@+id/initDT"
+                        style="@style/EditDoubleNum" />
+
+                    <com.xuexiang.xui.widget.textview.supertextview.SuperButton
+                        android:id="@+id/btnMeaDT"
+                        style="@style/ButtonView.Blue1"
+                        android:text="测量" />
+                </TableRow>
+
+                <TableRow android:layout_marginTop="2dp">
+
+                    <TextView android:text="出厂KL" />
+
+                    <EditText
+                        android:id="@+id/initKL"
+                        style="@style/EditDoubleNum" />
+                </TableRow>
+
+                <TableRow android:layout_marginTop="2dp">
+
+                    <TextView android:text="出厂KR" />
+
+                    <EditText
+                        android:id="@+id/initKR"
+                        style="@style/EditDoubleNum" />
+                </TableRow>
+
+                <TableRow android:layout_marginTop="2dp">
+
+                    <TextView android:text="出厂XT" />
+
+                    <EditText
+                        android:id="@+id/initXT"
+                        style="@style/EditDoubleNum" />
+                </TableRow>
+
+                <TableRow android:layout_marginTop="2dp">
+
+                    <TextView android:text="出厂YT" />
+
+                    <EditText
+                        android:id="@+id/initYT"
+                        style="@style/EditDoubleNum" />
+                </TableRow>
+
+                <TableRow android:layout_marginTop="2dp">
+
+                    <TextView android:text="出厂KX" />
+
+                    <EditText
+                        android:id="@+id/initKX"
+                        style="@style/EditDoubleNum" />
+                </TableRow>
+
+                <TableRow android:layout_marginTop="2dp">
+
+                    <TextView android:text="出厂KY" />
+
+                    <EditText
+                        android:id="@+id/initKY"
+                        style="@style/EditDoubleNum" />
+                </TableRow>
+
+                <TableRow android:layout_marginTop="2dp">
+
+                    <TextView android:text="标定温度" />
+
+                    <EditText
+                        android:id="@+id/initTemp"
+                        style="@style/EditDoubleNum" />
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

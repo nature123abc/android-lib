@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.MainActivity">
+
+    <include layout="@layout/include_title1"></include>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <TableRow
+                    android:layout_marginTop="5dp"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true">
+
+
+                    <TextView android:text="测量次数：" />
+
+                    <EditText
+                        android:id="@+id/edtNum"
+                        android:layout_weight="1"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:inputType="number"
+                        android:text="10" />
+                </TableRow>
+
+
+            </TableLayout>
+
+            <View style="@style/LineHorizontal" />
+
+            <TextView
+                android:id="@+id/txtInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="--" />
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <View style="@style/LineHorizontal" />
+
+                <TableRow  >
+
+
+                    <TextView android:text="次数" />
+
+                    <TextView
+                        android:id="@+id/txtCountP"
+                        android:layout_weight="1"
+                        android:text="--" />
+
+
+
+
+                </TableRow>
+
+                <View style="@style/LineHorizontal" />
+
+                <TableRow android:layout_marginTop="5dp">
+
+
+                    <TextView
+                        android:layout_marginRight="10dp"
+                        android:text="最大值" />
+
+                    <TextView
+                        android:id="@+id/txtMaxP"
+                        android:layout_weight="1"
+                        android:text="--" />
+
+
+
+                </TableRow>
+
+                <View style="@style/LineHorizontal" />
+
+                <TableRow android:layout_marginTop="5dp">
+
+
+                    <TextView android:text="最小值" />
+
+                    <TextView
+                        android:id="@+id/txtMinP"
+                        android:layout_weight="1"
+                        android:text="--" />
+
+
+
+                </TableRow>
+
+                <View style="@style/LineHorizontal" />
+                <TableRow android:layout_marginTop="5dp">
+
+
+                    <TextView android:text="均值" />
+
+                    <TextView
+                        android:id="@+id/txtAvgP"
+                        android:layout_weight="1"
+                        android:text="--" />
+
+
+
+                </TableRow>
+            </TableLayout>
+
+
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginRight="20dp"
+                android:orientation="vertical">
+
+                <TableRow android:layout_marginTop="5dp">
+
+                    <com.xuexiang.xui.widget.textview.supertextview.SuperButton
+                        android:id="@+id/btnXZ0"
+                        style="@style/ButtonView.Blue1"
+                        android:layout_weight="1"
+                        android:text="@string/dir_x_0_positive" />
+
+                    <com.xuexiang.xui.widget.textview.supertextview.SuperButton
+                        android:id="@+id/btnXF0"
+                        style="@style/ButtonView.Blue1"
+                        android:layout_marginStart="20dp"
+                        android:layout_weight="1"
+                        android:text="0位X反向" />
+
+                    <com.xuexiang.xui.widget.textview.supertextview.SuperButton
+                        android:id="@+id/btnComputX"
+                        style="@style/ButtonView.Blue1"
+                        android:layout_marginStart="20dp"
+                        android:layout_weight="1"
+                        android:text="X计算" />
+                </TableRow>
+
+                <TableRow android:layout_marginTop="5dp">
+
+                    <com.xuexiang.xui.widget.textview.supertextview.SuperButton
+                        android:id="@+id/btnYZ0"
+                        style="@style/ButtonView.Blue1"
+
+                        android:layout_weight="1"
+                        android:text="0位Y正向" />
+
+                    <com.xuexiang.xui.widget.textview.supertextview.SuperButton
+                        android:id="@+id/btnYF0"
+                        style="@style/ButtonView.Blue1"
+                        android:layout_marginStart="20dp"
+                        android:layout_weight="1"
+                        android:text="0位Y反向"  />
+
+                    <com.xuexiang.xui.widget.textview.supertextview.SuperButton
+                        android:id="@+id/btnComputY"
+                        style="@style/ButtonView.Blue1"
+                        android:layout_marginStart="20dp"
+                        android:layout_weight="1"
+                        android:text="Y计算" />
+                </TableRow>
+
+
+            </TableLayout>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginRight="20dp"
+                android:orientation="vertical">
+                <TableRow android:layout_marginTop="5dp">
+                    <TextView
+                        android:text="修正值：" />
+                    <TextView
+                        android:id="@+id/txtInfo1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="--" />
+
+
+                </TableRow>
+            </TableLayout>
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginRight="20dp"
+                android:orientation="vertical">
+                <TableRow android:layout_marginTop="5dp">
+
+                    <com.xuexiang.xui.widget.textview.supertextview.SuperButton
+                        android:id="@+id/btnMeaZ"
+                        style="@style/ButtonView.Blue1"
+
+                        android:layout_weight="1"
+                        android:text="正向测量" />
+
+                    <com.xuexiang.xui.widget.textview.supertextview.SuperButton
+                        android:id="@+id/btnMeaF"
+                        style="@style/ButtonView.Blue1"
+                        android:layout_marginStart="20dp"
+                        android:layout_weight="1"
+                        android:text="反向测量"  />
+
+
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

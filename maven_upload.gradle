@@ -1,0 +1,57 @@
+/*
+apply plugin: 'maven-publish'
+
+def RELEASE_REPOSITORY_URL = "https://gitee.com/nature123abc/android-lib"
+def SNAPSHOT_REPOSITORY_URL = "https://你的快照maven仓库地址"
+def NEXUS_USERNAME = "nature123abc"
+def NEXUS_PASSWORD = "Q&q15991408093"
+def GROUP = "com.dk"
+def POM_ARTIFACT_ID = "lib_dk"
+def VERSION_NAME = rootProject.ext.android["versionName"]
+
+afterEvaluate {
+    publishing {
+        repositories {
+            maven {
+                //allowInsecureProtocol(true)
+                name("ReleaseMaven")
+                url = RELEASE_REPOSITORY_URL
+                credentials {
+                    username = NEXUS_USERNAME
+                    password = NEXUS_PASSWORD
+                }
+            }
+            maven {
+                name("SnapshotMaven")
+                url = SNAPSHOT_REPOSITORY_URL
+                credentials {
+                    username = NEXUS_USERNAME
+                    password = NEXUS_PASSWORD
+                }
+            }
+        }
+        publications {
+            Production(MavenPublication) {
+                from components.release
+                artifact androidSourcesJar //打包源码，去除这行打的包将看不到源码
+                groupId = GROUP
+                artifactId = POM_ARTIFACT_ID
+                version = VERSION_NAME
+            }
+            Develop(MavenPublication) {
+                from components.debug
+                artifact androidSourcesJar //打包源码，去除这行打的包将看不到源码
+                groupId = GROUP
+                artifactId = POM_ARTIFACT_ID
+                version = "${VERSION_NAME}-SNAPSHOT"
+            }
+        }
+    }
+}
+
+// 用于打包源代码的任务
+task androidSourcesJar(type: Jar) {
+    archiveClassifier.set('sources')
+    from android.sourceSets.main.java.srcDirs  //包括Java和Kotlin源码
+}
+*/
