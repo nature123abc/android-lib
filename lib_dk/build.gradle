@@ -114,7 +114,7 @@ dependencies {
     implementation rootProject.ext.dependencies["retrofit-adapter-rxjava3"]
 
     implementation rootProject.ext.dependencies["ViewBindingKTX"]
-    implementation rootProject.ext.dependencies["BaseRecyclerViewAdapterHelper"]
+    implementation 'io.github.cymchad:BaseRecyclerViewAdapterHelper4:4.1.6'
 
     implementation rootProject.ext.dependencies["sqlcipher"]
     implementation 'androidx.sqlite:sqlite:2.3.1'

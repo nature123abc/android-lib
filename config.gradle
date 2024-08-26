@@ -59,7 +59,7 @@ ext {
             "XPopup"                       : "com.github.li-xiaojun:XPopup:2.10.0",
             "constraintlayout"             : "androidx.constraintlayout:constraintlayout:2.1.4",
             //"BaseRecyclerViewAdapterHelper": "com.github.CymChad:BaseRecyclerViewAdapterHelper:4.0.2",
-            "BaseRecyclerViewAdapterHelper": "io.github.cymchad:BaseRecyclerViewAdapterHelper4:4.1.4",
+            "BaseRecyclerViewAdapterHelper": "io.github.cymchad:BaseRecyclerViewAdapterHelper4:4.1.6",
             //RX3
             "rxandroid3"                   : "io.reactivex.rxjava3:rxandroid:3.0.2",
             "rxjava3"                      : "io.reactivex.rxjava3:rxjava:3.1.9",
