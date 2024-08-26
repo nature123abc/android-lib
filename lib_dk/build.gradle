@@ -31,7 +31,7 @@ subprojects {
 }*/
 android {
     namespace 'com.dk.lib_dk'
-    compileSdk rootProject.ext.android["compileSdkVersion"]
+    compileSdk 33
     buildFeatures {
         viewBinding true
     }
@@ -39,6 +39,7 @@ android {
         minSdk rootProject.ext.android["minSdkVersion"]
         targetSdk rootProject.ext.android["targetSdkVersion"]
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        versionCode versionCode
     }
     buildTypes {
         release {
@@ -62,6 +63,7 @@ android {
     publishing {
         singleVariant("release")
     }
+    buildToolsVersion '33.0.3'
 }
 afterEvaluate {
     publishing {

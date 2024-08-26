@@ -39,9 +39,10 @@ android {
         viewBinding true
     }
     defaultConfig {
-        minSdk rootProject.ext.android["minSdkVersion"]
-        targetSdk rootProject.ext.android["targetSdkVersion"]
+        minSdkVersion minSdkVersion
+        targetSdk 33
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        versionCode versionCode
     }
     buildTypes {
         release {
