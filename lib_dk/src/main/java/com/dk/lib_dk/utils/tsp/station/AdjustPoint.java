@@ -15,6 +15,8 @@ public class AdjustPoint extends Point4D {
     public Double detlY;
     public Double detlZ;//改正数
 
+    public Double detlHx;
+    public Double detlZx;
     public AdjustPoint(Double x, Double y, Double z, Double continuDk) {
         super(x, y, z, continuDk);
     }
