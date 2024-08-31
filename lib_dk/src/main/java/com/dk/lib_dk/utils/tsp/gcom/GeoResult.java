@@ -66,7 +66,7 @@ public class GeoResult {
     }
 
     public static BaseObser obtObsInfo(List<String> parms) {
-        if (parms.size() < 4) {
+        if (parms.size() < 3) {
             throw new CommonException("距离测量有误");
         }
         BaseObser t = new BaseObser(null, Double.valueOf(parms.get(0)), Double.valueOf(parms.get(1)), Double.valueOf(parms.get(2)));
